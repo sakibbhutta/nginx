@@ -26,3 +26,7 @@ ONTAINER ID   IMAGE      COMMAND                  CREATED         STATUS        
 b95133e50bc6   nginxweb   "/docker-entrypoint.…"   7 minutes ago   Up 7 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp   nginxweb
 ```
 4.  Now, ngnix can be browsed on  `http://localhost:8080`
+5. Created a new file named "index.html" with following command, added some text and saved it:
+```console
+$ touch index.html
+```
