@@ -135,6 +135,6 @@ ________________________________________________________________________________
 ```console
 $ sudo cp -p about.html /var/lib/docker/volumes/my_volume
 ```
-9. Refresh the page on `localhost:8081`
+9. Refresh the page on `http://localhost:8081/about.html`
 (showing the content of updated/copied file)
 
