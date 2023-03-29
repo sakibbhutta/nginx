@@ -111,6 +111,9 @@ services:
 $ docker compose uo -d
 ```
 4. browse the `httpd` on `localhost:8081`
+
+![image](https://user-images.githubusercontent.com/126319802/228532996-75e72648-3e2d-400e-9b46-929338f46efe.png)
+
 ________________________________________________________________________________________________________
 ________________________________________________________________________________________________________
 ```console
@@ -137,6 +140,8 @@ $ sudo cp -p about.html /var/lib/docker/volumes/my_volume
 ```
 9.  Refresh the page on `http://localhost:8081/about.html`
 (showing the content of updated/copied file)
+![image](https://user-images.githubusercontent.com/126319802/228533168-7e54e78c-4cef-48a1-9595-74b462971480.png)
+
 10. list the containers by using command
 ```console
 $ docker ps 
