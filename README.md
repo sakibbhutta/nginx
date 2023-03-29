@@ -52,7 +52,8 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________
 7. Create a file `index.html` in home directory with following content
 ```console
-  GNU nano 6.2                                                      index.html                                                               
+  GNU nano 6.2                                                      
+  index.html                                                               
 <!doctype html>
 <html lang="en">
 <head>
@@ -68,9 +69,9 @@ ________________________________________________________________________________
 </body>
 </html>
 ```
-8.  now. copy the newly created file to `my_volume` with is attaced with running container with following command:
+8.  now, copy the newly created file to `my_volume` with is attaced with running container with following command:
 ```console
-$ sudo cp -p . /var/lib/docker/volumes/my_named_volume/_data/
+$ sudo cp -p index.html /var/lib/docker/volumes/my_volume
 ```
 9. Refresh the page on `localhost:8080`
 (showing the content of updated/copied file)
@@ -110,3 +111,30 @@ services:
 $ docker compose uo -d
 ```
 4. browse the `httpd` on `localhost:8081`
+________________________________________________________________________________________________________
+________________________________________________________________________________________________________
+```console
+  GNU nano 6.2                                                      
+  index.html                                                               
+<!doctype html>
+<html lang="en">
+<head>
+
+<p>httpd with Docker Compose</p>
+
+
+</head>
+<body>
+
+<h2>this is my customised docker file</h2>
+<p>This is newly created file for httpd which is copied.</p>
+</body>
+</html>
+```
+8.  now, copy the newly created file to `my_volume` with is attaced with running container with following command:
+```console
+$ sudo cp -p about.html /var/lib/docker/volumes/my_volume
+```
+9. Refresh the page on `localhost:8081`
+(showing the content of updated/copied file)
+
