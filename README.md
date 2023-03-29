@@ -135,6 +135,16 @@ ________________________________________________________________________________
 ```console
 $ sudo cp -p about.html /var/lib/docker/volumes/my_volume
 ```
-9. Refresh the page on `http://localhost:8081/about.html`
+9.  Refresh the page on `http://localhost:8081/about.html`
 (showing the content of updated/copied file)
+10. list the containers by using command
+```console
+$ docker ps 
+CONTAINER ID   IMAGE          COMMAND              CREATED          STATUS          PORTS                                   NAMES
+22b1e6bd3d34   httpd:latest   "httpd-foreground"   15 minutes ago   Up 15 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp   httpd-web-1
+```
+11. stop the container `httpd-web-1` with following command:
+```console
+$ docker stop httpd-web-1
+```
 
