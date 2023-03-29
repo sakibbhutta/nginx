@@ -48,4 +48,29 @@ services:
 $ docker-compose up -d
 ```
 6.  Now, ngnix can be browsed on  `http://localhost:8080`
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+7. Create a file `index.html` in home directory with following content
+```console
+  GNU nano 6.2                                                      index.html                                                               
+<!doctype html>
+<html lang="en">
+<head>
 
+<p>Nginx with Docker Compose</p>
+
+
+</head>
+<body>
+
+<h2>this is my customised docker file</h2>
+<p>This is newly created file which is copied.</p>
+</body>
+</html>
+```
+8.  now. copy the newly created file to `my_volume` with is attaced with running container with following command:
+```console
+$ sudo cp -p . /var/lib/docker/volumes/my_named_volume/_data/
+```
+9. Refresh the page on `localhost:8080`
+(showing the content of updated/copied file)
