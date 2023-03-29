@@ -88,11 +88,13 @@ $ docker stop nginx1_web_1
 ```
 ________________________________________________________________________________________________________________________
 ________________________________________________________________________________________________________________________
-12. create a directory `httpd`
+# httpd
+
+1. create a directory `httpd`
 ```console
 $ mkdir httpd
 ```
-13. crrate a `docker-compose.yml` with following content while mapping the `my_volume` to httpd's container directory `/usr/local/apache2/htdocs`:
+2. crrate a `docker-compose.yml` with following content while mapping the `my_volume` to httpd's container directory `/usr/local/apache2/htdocs`:
 ```console
 version: '3'
 services:
@@ -103,3 +105,8 @@ services:
    volumes:
    - /var/lib/docker/volumes/my_volume:/usr/local/apache2/htdocs
 ```
+3. build the image with following command:
+```console
+$ docker compose uo -d
+```
+4. browse the `httpd` on `localhost:80801`
