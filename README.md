@@ -101,7 +101,7 @@ services:
   web:
    image: httpd:latest
    ports:
-   - "8080:80"
+   - "8081:80"
    volumes:
    - /var/lib/docker/volumes/my_volume:/usr/local/apache2/htdocs
 ```
@@ -109,4 +109,4 @@ services:
 ```console
 $ docker compose uo -d
 ```
-4. browse the `httpd` on `localhost:80801`
+4. browse the `httpd` on `localhost:8081`
