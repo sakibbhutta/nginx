@@ -74,3 +74,32 @@ $ sudo cp -p . /var/lib/docker/volumes/my_named_volume/_data/
 ```
 9. Refresh the page on `localhost:8080`
 (showing the content of updated/copied file)
+_______________________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________
+10. Run the following command to show the running container:
+```console
+$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+b1e27e0c0769   nginx:latest   "/docker-entrypoint.…"   29 minutes ago   Up 29 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp   nginx1_web_1
+```
+11. Run the following command to stop the `nginx1_web_1` container
+```console
+$ docker stop nginx1_web_1
+```
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+12. create a directory `httpd`
+```console
+$ mkdir httpd
+```
+13. crrate a `docker-compose.yml` with following content while mapping the `my_volume` to httpd's container directory `/usr/local/apache2/htdocs`:
+```console
+version: '3'
+services:
+  web:
+   image: httpd:latest
+   ports:
+   - "8080:80"
+   volumes:
+   - /var/lib/docker/volumes/my_volume:/usr/local/apache2/htdocs
+```
