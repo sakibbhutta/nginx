@@ -147,4 +147,7 @@ CONTAINER ID   IMAGE          COMMAND              CREATED          STATUS      
 ```console
 $ docker stop httpd-web-1
 ```
-
+12. remove the containers with follwoing command:
+```console
+$ docker container prune
+```
